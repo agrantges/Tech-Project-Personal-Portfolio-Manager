@@ -14,8 +14,8 @@ public class CashServiceImpl implements CashService {
     private CashRepository cashRepository;
 
     @Override
-    public Collection<Cash> getNetWorth() {
-        return cashRepository.netWorth();
+    public Double getNetWorth() {
+        return cashRepository.getNetWorth();
     }
 
 }

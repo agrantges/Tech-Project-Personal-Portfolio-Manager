@@ -5,5 +5,5 @@ import com.citi.training.SampleSpringBoot.entities.Cash;
 import java.util.Collection;
 
 public interface CashService {
-    Collection<Cash> getNetWorth();
+    Double getNetWorth();
 }
