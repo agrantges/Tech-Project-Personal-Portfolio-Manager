@@ -17,10 +17,9 @@ class SampleSpringBootApplicationTests {
 	@Test
 	void testNetWorth()
 	{
-		System.out.println("Test working");
-		System.out.println("Net Worth = ");
-		assertTrue(Cash.getNetWorth() == 524757.6381835938);
+
 	}
 
 
 }
+
