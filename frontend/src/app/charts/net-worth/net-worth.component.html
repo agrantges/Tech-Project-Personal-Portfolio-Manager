@@ -1,7 +1,12 @@
 <h2>Net Worth (Chart) - $12000</h2>        
-<section>
-    <h3>Charts</h3>
-    <canvas id='myChart' ></canvas>
-</section>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src='../charting.js'></script>
+<div>
+    <div>
+      <div style="display: block">
+        <canvas baseChart
+          [data]="doughnutChartData"
+          [labels]="doughnutChartLabels"
+          [chartType]="doughnutChartType">
+        </canvas>
+      </div>
+    </div>
+  </div>
