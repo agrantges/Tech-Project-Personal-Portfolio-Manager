@@ -1,15 +1,18 @@
-<h3>Cash - $6000</h3>
-<table>
-    <tr>
-        <th>Company 1</th>
-        <th>$2000</th>
-    </tr>
-    <tr>
-        <th>Company 2</th>
-        <th>$3000</th>
-    </tr>
-    <tr>
-        <th>Company 3</th>
-        <th>$1000</th>
-    </tr>
-</table>
+<button type="button" class="btn btn-outline-primary btn-block" (click)="collapse.toggle()" [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
+    <h3>Cash - $6000</h3>
+</button>
+<div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed">
+    <div class = "card-body px-0">
+        <ul class = "list-group">
+            <li class = "list-group-item text-center">
+                <p>Company 1 - $2000</p>
+            </li>
+            <li class = "list-group-item text-center">
+                <p>Company 2 - $3000</p>
+            </li>
+            <li class = "list-group-item text-center">
+                <p>Company 3 - $1000</p>
+            </li>
+        </ul>
+    </div>
+</div>
