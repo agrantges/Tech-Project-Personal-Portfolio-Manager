@@ -8,11 +8,15 @@ import { CashComponent } from './evaluation/cash/cash.component';
 import { InvestmentComponent } from './evaluation/investment/investment.component';
 import { ChartsComponent } from './charts/charts.component';
 import { NetWorthComponent } from './charts/net-worth/net-worth.component';
+<<<<<<< HEAD
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+=======
+>>>>>>> 0fcda87679e45b958ae443ec0cd4a6f529028f0e
 import { MarketMoversComponent } from './market-movers/market-movers.component';
 import { IndicesComponent } from './market-movers/indices/indices.component';
 import { GainersComponent } from './market-movers/gainers/gainers.component';
 import { LosersComponent } from './market-movers/losers/losers.component';
+<<<<<<< HEAD
 import { MdbAccordionModule } from 'mdb-angular-ui-kit/accordion';
 import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
 import { MdbCheckboxModule } from 'mdb-angular-ui-kit/checkbox';
@@ -29,6 +33,9 @@ import { MdbTabsModule } from 'mdb-angular-ui-kit/tabs';
 import { MdbTooltipModule } from 'mdb-angular-ui-kit/tooltip';
 import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+=======
+
+>>>>>>> 0fcda87679e45b958ae443ec0cd4a6f529028f0e
 
 @NgModule({
   declarations: [
