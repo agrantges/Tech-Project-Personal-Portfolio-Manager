@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject, Renderer2 } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-net-worth',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NetWorthComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _renderer2: Renderer2, 
+    @Inject(DOCUMENT) private _document: Document) { }
 
   ngOnInit(): void {
-  }
+    
+ }
 
 }
