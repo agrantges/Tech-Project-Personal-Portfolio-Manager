@@ -49,5 +49,4 @@ public class AccountController
     {
         return accountService.getAllInvestment();
     }
-
 }

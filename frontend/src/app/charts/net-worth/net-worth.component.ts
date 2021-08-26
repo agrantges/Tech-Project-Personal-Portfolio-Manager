@@ -12,9 +12,9 @@ import { SpringServiceService } from 'src/services/spring-service.service';
 export class NetWorthComponent implements OnInit {
 
   public lineChartData: ChartDataSets[] = [
-    { data: [65, 59, 80, 81, 56, 55, 40], label: 'Total Net Worth' },
+    { data: [], label: 'Total Net Worth' },
   ];
-  public lineChartLabels: Label[] = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+  public lineChartLabels: Label[] = [];
   public lineChartOptions: any = {
     responsive: true,
   };
@@ -28,12 +28,12 @@ export class NetWorthComponent implements OnInit {
   public lineChartType: ChartType = 'line';
   public lineChartPlugins = [];
 
-  public data: any;
   public totalNet: number = 0;
   constructor(private springService:SpringServiceService) { }
 
   ngOnInit() {
     this.getNetWorth()
+    this.getData()
   }
 
   getNetWorth() {
@@ -47,9 +47,13 @@ export class NetWorthComponent implements OnInit {
   }
 
   getData() {
-    this.springService.getCash().subscribe((data: any) => {
+    this.springService.getNetWorthDates().subscribe((data: any) => {
+      console.log("getting networth data")
       console.log(data)
-      this.data = data;
+      for (var i = 0; i < data.length; ++i) {
+        this.lineChartData[0].data?.push(data[i].value)
+        this.lineChartLabels.push(data[i].date)
+      }
     }, (err:any) => {
       console.log("entry not found")
     })

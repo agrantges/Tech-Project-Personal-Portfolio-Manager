@@ -30,4 +30,8 @@ export class SpringServiceService {
   public getInvestment() {
     return this.http.get(this.springURL + "investment")
   }
+
+  public getNetWorthDates() {
+    return this.http.get( "http://localhost:8080/networthdates/networthdates")
+  }
 }
