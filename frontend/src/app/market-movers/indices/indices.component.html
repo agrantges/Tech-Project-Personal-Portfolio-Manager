@@ -26,5 +26,10 @@
             {{stocks[3].regularMarketPrice | currency: '$'}} |
             {{stocks[3].regularMarketChangePercent > 0 ? '+' : ''}}{{stocks[3].regularMarketChangePercent | number:'1.2-2'}}%
         </li>
+        <li class = "list-group-item text-center">
+            Your Holdings : {{(stocks[0].regularMarketChangePercent + stocks[1].regularMarketChangePercent + stocks[2].regularMarketChangePercent
+                + stocks[3].regularMarketChangePercent) / 5.0 | number:'1.2-2'}}%
+            <br>
+        </li>
     </ul>
 </div>
