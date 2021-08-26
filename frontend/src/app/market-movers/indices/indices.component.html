@@ -1,3 +1,4 @@
+<br>
 <h3 class = "text-center">Stock Indices & Bonds</h3>
 <div class = "card-body px-0">
     <ul class = "list-group">
@@ -24,6 +25,11 @@
             {{stocks[3].shortName}} |
             {{stocks[3].regularMarketPrice | currency: '$'}} |
             {{stocks[3].regularMarketChangePercent > 0 ? '+' : ''}}{{stocks[3].regularMarketChangePercent | number:'1.2-2'}}%
+        </li>
+        <li class = "list-group-item text-center">
+            Your Holdings : {{(stocks[0].regularMarketChangePercent + stocks[1].regularMarketChangePercent + stocks[2].regularMarketChangePercent
+                + stocks[3].regularMarketChangePercent) / 5.0 | number:'1.2-2'}}%
+            <br>
         </li>
     </ul>
 </div>
