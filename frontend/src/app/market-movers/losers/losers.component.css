@@ -1,8 +1,5 @@
-.list-group-item{background-color:#F0F0F0; }  
-[number] 
-{
-    color: red;
-}
+.list-group-item{background-color:#F0F0F0; color:red;  }  
+
 
 h3 {
     border: 1px solid rgb(0, 0, 0);
