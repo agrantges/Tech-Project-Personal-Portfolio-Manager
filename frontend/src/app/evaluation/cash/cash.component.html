@@ -5,7 +5,7 @@
     <div class = "card-body px-0">
         <ul class = "list-group">
             <li class = "list-group-item text-center" *ngFor = 'let account of data'>
-                <p>{{account.bank}} - Acc Num: {{account.acct_number}}</p>
+                <p><b>{{account.bank}}</b> - Acc Num: {{account.acct_number}}</p>
                 <p>${{account.value}}</p>
             </li>
         </ul>
