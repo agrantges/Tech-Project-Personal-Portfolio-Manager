@@ -8,7 +8,6 @@ import { TickerService } from '../../../services/ticker.service';
 })
 export class GainersComponent implements OnInit {
   //declare model data for this component
-  //gainerData = {region:'US',symbol:'',shortName:'', regularMarketPrice:1.0, regularMarketChangePercent:2.0}
   paramObj = {ticker:''}
   gainerData = {symbol:'',shortName:'', regularMarketPrice: 0.0, regularMarketChangePercent:0.0}
   stocks = [
