@@ -8,10 +8,18 @@ export class SpringServiceService {
 
   private springURL: string;
   constructor(private http: HttpClient) { 
-    this.springURL = "http://localhost:8080/accounts/all"
+    this.springURL = "http://localhost:8080/accounts/"
   }
   
-  public findAll() {
-    return this.http.get(this.springURL)
+  public getAccounts() {
+    return this.http.get(this.springURL + "all")
+  }
+
+  public getValues() {
+    return this.http.get(this.springURL + "values")
+  }
+
+  public getNetWorth() {
+    return this.http.get(this.springURL + "networth")
   }
 }

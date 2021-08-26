@@ -16,6 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ChartsModule } from 'ng2-charts';
 import { HttpClientModule } from '@angular/common/http';
+import { CashFlowComponent } from './charts/cash-flow/cash-flow.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { HttpClientModule } from '@angular/common/http';
     MarketMoversComponent,
     IndicesComponent,
     GainersComponent,
-    LosersComponent
+    LosersComponent,
+    CashFlowComponent
   ],
   imports: [
     BrowserModule,
