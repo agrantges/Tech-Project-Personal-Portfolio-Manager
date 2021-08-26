@@ -9,4 +9,6 @@ public interface AccountService {
     List<Double> getNetWorth();
     Collection<Account> getAllAccounts();
     List<Double> getAllValues();
+    Collection<Account> getAllCash();
+    Collection<Account> getAllInvestment();
 }

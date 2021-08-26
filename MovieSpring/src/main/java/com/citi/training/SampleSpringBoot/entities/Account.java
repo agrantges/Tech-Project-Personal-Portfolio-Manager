@@ -19,16 +19,16 @@ public class Account implements Serializable {
     @Column(name="bank")
     private String bank;
     @Column(name="value")
-    private static Double value;
+    private Double value;
     @Column(name="date_time")
     private String date_time;
 
-    public static Double getValue() {
+    public Double getValue() {
         return value;
     }
 
-    public static void setValue(Double value) {
-        Account.value = value;
+    public void setValue(Double value) {
+        this.value = value;
     }
 
     public String getRouting_number() {

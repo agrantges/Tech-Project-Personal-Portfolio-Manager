@@ -30,4 +30,16 @@ public class AccountServiceImpl implements AccountService {
         return accountRepository.findAllValues();
     }
 
+    @Override
+    public Collection<Account> getAllCash()
+    {
+        return accountRepository.getAllCash();
+    }
+
+    @Override
+    public Collection<Account> getAllInvestment()
+    {
+        return accountRepository.getAllInvestment();
+    }
+
 }

@@ -8,9 +8,12 @@ import { SpringServiceService } from 'src/services/spring-service.service';
 })
 export class CashComponent implements OnInit {
   public isCollapsed = false;
+  public data: any;
+  public totalCash = 0;
   constructor(private springService:SpringServiceService) { }
 
   ngOnInit(): void {
+    this.getAllCash()
   }
 
   getAllAccounts() {
@@ -21,20 +24,16 @@ export class CashComponent implements OnInit {
     })
   }
 
-  getAllValues() {
-    this.springService.getValues().subscribe((data: any) => {
+  getAllCash() {
+    this.springService.getCash().subscribe((data: any) => {
       console.log(data)
+      this.data = data;
+      for (var i = 0; i < data.length; ++i) {
+        this.totalCash += data[i].value;
+      }
+      this.totalCash = Math.round(this.totalCash * 100) / 100;
     }, (err:any) => {
       console.log("entry not found")
     })
   }
-
-  getAllNetWorth() {
-    this.springService.getNetWorth().subscribe((data: any) => {
-      console.log(data)
-    }, (err:any) => {
-      console.log("entry not found")
-    })
-  }
-
 }

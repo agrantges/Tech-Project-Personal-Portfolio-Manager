@@ -22,4 +22,12 @@ export class SpringServiceService {
   public getNetWorth() {
     return this.http.get(this.springURL + "networth")
   }
+
+  public getCash() {
+    return this.http.get(this.springURL + "cash")
+  }
+
+  public getInvestment() {
+    return this.http.get(this.springURL + "investment")
+  }
 }

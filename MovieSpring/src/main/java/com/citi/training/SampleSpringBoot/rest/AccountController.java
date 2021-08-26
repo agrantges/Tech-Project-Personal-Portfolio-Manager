@@ -36,4 +36,18 @@ public class AccountController
         return accountService.getNetWorth();
     }
 
+    @CrossOrigin
+    @GetMapping(path="/cash")
+    public @ResponseBody Collection<Account> getCash()
+    {
+        return accountService.getAllCash();
+    }
+
+    @CrossOrigin
+    @GetMapping(path="/investment")
+    public @ResponseBody Collection<Account> getInvestment()
+    {
+        return accountService.getAllInvestment();
+    }
+
 }
