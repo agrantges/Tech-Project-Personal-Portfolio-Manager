@@ -1,6 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ChartDataSets, ChartOptions, ChartType } from 'chart.js';
 import { Color, Label } from 'ng2-charts';
+import { SpringServiceService } from 'src/services/spring-service.service';
+
 
 @Component({
   selector: 'app-net-worth',
@@ -10,7 +12,7 @@ import { Color, Label } from 'ng2-charts';
 export class NetWorthComponent implements OnInit {
 
   public lineChartData: ChartDataSets[] = [
-    { data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A' },
+    { data: [65, 59, 80, 81, 56, 55, 40], label: 'Total Net Worth' },
   ];
   public lineChartLabels: Label[] = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
   public lineChartOptions: any = {
@@ -26,9 +28,31 @@ export class NetWorthComponent implements OnInit {
   public lineChartType: ChartType = 'line';
   public lineChartPlugins = [];
 
-  constructor() { }
+  public data: any;
+  public totalNet: number = 0;
+  constructor(private springService:SpringServiceService) { }
 
   ngOnInit() {
+    this.getNetWorth()
+  }
+
+  getNetWorth() {
+    this.springService.getNetWorth().subscribe((data: any) => {
+      console.log(data)
+      this.totalNet = data[0];
+      this.totalNet = Math.round(this.totalNet * 100) / 100;
+    }, (err:any) => {
+      console.log("entry not found")
+    })
+  }
+
+  getData() {
+    this.springService.getCash().subscribe((data: any) => {
+      console.log(data)
+      this.data = data;
+    }, (err:any) => {
+      console.log("entry not found")
+    })
   }
 
  /*// events
