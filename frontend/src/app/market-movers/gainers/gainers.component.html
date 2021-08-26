@@ -2,22 +2,34 @@
 <div class = "card-body px-0">
     <ul class = "list-group">
         <li class = "list-group-item text-center">
-            Apple - 2.5%
+            {{stocks[0].symbol}} |
+            {{stocks[0].shortName}} |
+            {{stocks[0].regularMarketPrice | currency: '$'}} |
+            {{stocks[0].regularMarketChangePercent > 0 ? '+' + stocks[0].regularMarketChangePercent  : stocks[0].regularMarketChangePercent | number:'1.2-2'}}
         </li>
         <li class = "list-group-item text-center">
-            Apple - 2.5%
+            {{stocks[1].symbol}} |
+            {{stocks[1].shortName}} |
+            {{stocks[1].regularMarketPrice | currency: '$'}} |
+            {{stocks[1].regularMarketChangePercent > 0 ? '+' + stocks[1].regularMarketChangePercent  : stocks[1].regularMarketChangePercent | number:'1.2-2'}}
         </li>
         <li class = "list-group-item text-center">
-            Apple - 2.5%
+            {{stocks[2].symbol}} |
+            {{stocks[2].shortName}} |
+            {{stocks[2].regularMarketPrice | currency: '$'}} |
+            {{stocks[2].regularMarketChangePercent > 0 ? '+' + stocks[2].regularMarketChangePercent  : stocks[2].regularMarketChangePercent | number:'1.2-2'}}
         </li>
         <li class = "list-group-item text-center">
-            Apple - 2.5%
+            {{stocks[3].symbol}} |
+            {{stocks[3].shortName}} |
+            {{stocks[3].regularMarketPrice | currency: '$'}} |
+            {{stocks[3].regularMarketChangePercent > 0 ? '+' + stocks[3].regularMarketChangePercent  : stocks[3].regularMarketChangePercent | number:'1.2-2'}}
         </li>
         <li class = "list-group-item text-center">
-            Apple - 2.5%
+            {{stocks[4].symbol}} |
+            {{stocks[4].shortName}} |
+            {{stocks[4].regularMarketPrice | currency: '$'}} |
+            {{stocks[4].regularMarketChangePercent > 0 ? '+' + stocks[4].regularMarketChangePercent  : stocks[4].regularMarketChangePercent | number:'1.2-2'}}
         </li>
     </ul>
 </div>
-<section>
-    <button (click)='makeTickerServiceCall()'>AMD</button>
-</section>
