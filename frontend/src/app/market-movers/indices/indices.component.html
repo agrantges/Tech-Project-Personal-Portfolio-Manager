@@ -5,25 +5,25 @@
             {{stocks[0].symbol}} |
             {{stocks[0].shortName}} |
             {{stocks[0].regularMarketPrice | currency: '$'}} |
-            {{stocks[0].regularMarketChangePercent > 0 ? '+' + stocks[0].regularMarketChangePercent  : stocks[0].regularMarketChangePercent | number:'1.2-2'}}
+            {{stocks[0].regularMarketChangePercent > 0 ? '+' : ''}}{{stocks[0].regularMarketChangePercent | number:'1.2-2'}}%
         </li>
         <li class = "list-group-item text-center">
             {{stocks[1].symbol}} |
             {{stocks[1].shortName}} |
             {{stocks[1].regularMarketPrice | currency: '$'}} |
-            {{stocks[1].regularMarketChangePercent > 0 ? '+' + stocks[1].regularMarketChangePercent  : stocks[1].regularMarketChangePercent | number:'1.2-2'}}
+            {{stocks[1].regularMarketChangePercent > 0 ? '+' : ''}}{{stocks[1].regularMarketChangePercent | number:'1.2-2'}}%
         </li>
         <li class = "list-group-item text-center">
             {{stocks[2].symbol}} |
             {{stocks[2].shortName}} |
             {{stocks[2].regularMarketPrice | currency: '$'}} |
-            {{stocks[2].regularMarketChangePercent > 0 ? '+' + stocks[2].regularMarketChangePercent  : stocks[2].regularMarketChangePercent | number:'1.2-2'}}
+            {{stocks[2].regularMarketChangePercent > 0 ? '+' : ''}}{{stocks[2].regularMarketChangePercent | number:'1.2-2'}}%
         </li>
         <li class = "list-group-item text-center">
             {{stocks[3].symbol}} |
             {{stocks[3].shortName}} |
             {{stocks[3].regularMarketPrice | currency: '$'}} |
-            {{stocks[3].regularMarketChangePercent > 0 ? '+' + stocks[3].regularMarketChangePercent  : stocks[3].regularMarketChangePercent | number:'1.2-2'}}
+            {{stocks[3].regularMarketChangePercent > 0 ? '+' : ''}}{{stocks[3].regularMarketChangePercent | number:'1.2-2'}}%
         </li>
     </ul>
 </div>
