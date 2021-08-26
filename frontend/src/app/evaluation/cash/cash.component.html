@@ -1,12 +1,12 @@
 <button type="button" class="btn btn-outline-primary btn-block" (click)="collapse.toggle()" [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
-    <h3>Cash - ${{totalCash}}</h3>
+    <h3>Cash - ${{totalCash | number:'1.2-2'}}</h3>
 </button>
 <div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed">
     <div class = "card-body px-0">
         <ul class = "list-group">
             <li class = "list-group-item text-center" *ngFor = 'let account of data'>
-                <p><b>{{account.bank}}</b> - Acc Num: {{account.acct_number}}</p>
-                <p>${{account.value}}</p>
+                <p><b>{{account.bank}}</b> - Acc Num: xxxx{{account.acct_number | slice:-6}}</p>
+                <p>${{account.value | number:'1.2-2'}}</p>
             </li>
         </ul>
     </div>
