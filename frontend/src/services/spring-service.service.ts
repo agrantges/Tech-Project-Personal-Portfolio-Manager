@@ -7,31 +7,35 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class SpringServiceService {
 
   private springURL: string;
+  private accURL : string;
+  private netWorthURL : string;
   constructor(private http: HttpClient) { 
-    this.springURL = "http://localhost:8080/accounts/"
+    this.springURL = "http://localhost:8080"
+    this.accURL = "/accounts/"
+    this.netWorthURL = "/networthdates/"
   }
   
   public getAccounts() {
-    return this.http.get(this.springURL + "all")
+    return this.http.get(this.springURL + this.accURL + "all")
   }
 
   public getValues() {
-    return this.http.get(this.springURL + "values")
+    return this.http.get(this.springURL + this.accURL  + "values")
   }
 
   public getNetWorth() {
-    return this.http.get(this.springURL + "networth")
+    return this.http.get(this.springURL + this.accURL  + "networth")
   }
 
   public getCash() {
-    return this.http.get(this.springURL + "cash")
+    return this.http.get(this.springURL + this.accURL  + "cash")
   }
 
   public getInvestment() {
-    return this.http.get(this.springURL + "investment")
+    return this.http.get(this.springURL + this.accURL  + "investment")
   }
 
   public getNetWorthDates() {
-    return this.http.get( "http://localhost:8080/networthdates/networthdates")
+    return this.http.get(this.springURL + this.netWorthURL + "networthdates")
   }
 }
